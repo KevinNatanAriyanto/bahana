@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "166978453556",
+    "firebase_url": "https://the-chef-f26d3.firebaseio.com",
+    "project_id": "the-chef-f26d3",
+    "storage_bucket": "the-chef-f26d3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:166978453556:android:3213c4875419e5eda04a61",
+        "android_client_info": {
+          "package_name": "com.thechef"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "166978453556-s6matkipjuilsg4d32is8fmla33lhh8p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.thechef",
+            "certificate_hash": "708a635838c6700bb5f3943b4624df02890e52db"
+          }
+        },
+        {
+          "client_id": "166978453556-edcv42uqfvna6b92iik392pcvrsdpdqi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.thechef",
+            "certificate_hash": "5cafb562eb8e8a1ebf167eba7d7e81ae446cdbd5"
+          }
+        },
+        {
+          "client_id": "166978453556-f8fic2aogrj3qvto63k8k8239vimtskp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSl3gKyjpXIoQgRNV7d_zX7j7TdeyLfw0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "166978453556-f8fic2aogrj3qvto63k8k8239vimtskp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

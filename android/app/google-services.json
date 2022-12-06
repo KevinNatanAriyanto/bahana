@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "216033731574",
+    "firebase_url": "https://bahana-line-group.firebaseio.com",
+    "project_id": "bahana-line-group",
+    "storage_bucket": "bahana-line-group.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:216033731574:android:c5aa6a45b8121aba939dd7",
+        "android_client_info": {
+          "package_name": "com.bahanalinegroup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "216033731574-iu1ps73sdcerlmdnhsh5sdvmsjvgo6rf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bahanalinegroup",
+            "certificate_hash": "5cafb562eb8e8a1ebf167eba7d7e81ae446cdbd5"
+          }
+        },
+        {
+          "client_id": "216033731574-t0c4gvfan3rdqj4n28gqssgr3g97ed5r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkWkYgnEUP0uvx6WmoSkLB-y6gSGQ1Cs8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "216033731574-t0c4gvfan3rdqj4n28gqssgr3g97ed5r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

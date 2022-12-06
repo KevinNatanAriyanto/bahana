@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bahanalinegroup">
+
+    <!-- < Only if you're using GCM or localNotificationSchedule() > -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <permission
+        android:name="${applicationId}.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="${applicationId}.permission.C2D_MESSAGE" /> <!-- < Only if you're using GCM or localNotificationSchedule() > -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:name=".MainApplication"
+        android:allowBackup="false"
+        android:foregroundServiceType="location"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        
+        <receiver android:name=".ConnectionWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/connection_widget_info" />
+        </receiver>
+
+        <!--
+      <service android:name="com.transistorsoft.locationmanager.service.TrackingService" android:foregroundServiceType="location" />
+      <service android:name="com.transistorsoft.locationmanager.service.LocationRequestService" android:foregroundServiceType="location" />
+        -->
+        <meta-data
+            android:name="com.supersami.foregroundservice.notification_channel_name"
+            android:value="Bahana Line" />
+        <meta-data
+            android:name="com.supersami.foregroundservice.notification_channel_description"
+            android:value="Application is running." />
+        <meta-data
+            android:name="com.supersami.foregroundservice.notification_color"
+            android:resource="@color/blue" />
+
+        <service android:name="com.supersami.foregroundservice.ForegroundService" />
+        <service android:name="com.supersami.foregroundservice.ForegroundServiceTask" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAi42gCSxH6jpy-7Zhm8UdMxjOXUPKmPpQ" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.bugsnag.android.DETECT_NDK_CRASHES"
+            android:value="true" />
+        <meta-data
+            android:name="com.bugsnag.android.API_KEY"
+            android:value="152cb49ebbc1fb50b31562809c099456" />
+        <meta-data
+            android:name="com.dieam.reactnativepushnotification.notification_channel_name"
+            android:value="bahana" />
+        <meta-data
+            android:name="com.dieam.reactnativepushnotification.notification_channel_description"
+            android:value="bahana channel" /> <!-- Change the resource name to your App's accent color - or any other color you want -->
+        <meta-data
+            android:name="com.dieam.reactnativepushnotification.notification_color"
+            android:resource="@string/accent_color" /> <!-- or @android:color/{name} to use a standard color -->
+        <!-- < Only if you're using GCM or localNotificationSchedule() > -->
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </receiver> <!-- < Only if you're using GCM or localNotificationSchedule() > -->
+        <receiver android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationPublisher" />
+        <receiver android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationBootEventReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationRegistrationService" /> <!-- < Only if you're using GCM or localNotificationSchedule() > -->
+        <service
+            android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationListenerServiceGcm"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service> <!-- </ Only if you're using GCM or localNotificationSchedule() > -->
+        <!-- < Else > -->
+        <service
+            android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service> <!-- </Else> -->
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+        <activity android:name="com.intentfilter.androidpermissions.PermissionsActivity" />
+    </application>
+
+</manifest>

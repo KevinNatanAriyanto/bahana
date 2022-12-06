@@ -1,0 +1,13 @@
+<resources>
+    <!-- <string moduleConfig="true" name="reactNativeCodePush_androidDeploymentKey">xFTE7X9Wv1eeBKTELYdMeKWyrWDyJ2rEc-YWK</string> -->
+    <!-- <string moduleConfig="true" name="reactNativeCodePush_androidDeploymentKey">JDFtrzsmwqac00TaJ7sQoYkgcHP1eXD69_NZ6</string> -->
+    <string name="reactNativeCodePush_androidDeploymentKey" moduleConfig="true">ypsmUMGHdbz8edppcnE23bKWmrnULmcW9X4nq</string>
+    <string name="app_name">Bahana Group</string>
+    <string name="facebook_app_id">490988741629620</string>
+    <string name="accent_color">#195e83</string>
+    <string name="appCenterCrashes_whenToSendCrashes" moduleConfig="true" translatable="false">DO_NOT_ASK_JAVASCRIPT</string>
+    <string name="appCenterAnalytics_whenToEnableAnalytics" moduleConfig="true" translatable="false">ALWAYS_SEND</string>
+    <string name="appwidget_header">Bahana App</string>
+    <string name="appwidget_text">Disconnected</string>
+    <string name="add_widget">Add widget</string>
+</resources>

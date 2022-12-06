@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "id": "Jusuf-Nurkic",
+      "name": "Jusuf Nurkic",
+      "phone": "123456"
+    },
+    {
+      "id": "Rodney-Hood",
+      "name": "Rodney Hood",
+      "phone": "123456"
+    }
+  ]
+}

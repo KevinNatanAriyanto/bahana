@@ -1,0 +1,173 @@
+#Run with node 1.12
+
+Changelog v1.11.0:
+	+ Implementasi fitur Offline Mode
+
+Changelog v1.10.0c:
+	- Bug fix tampilan null pada absensi
+	+ Implementasi fitur reminder pekerjaan sesuai dengan interval
+	- Bug fix unknown error pada tambah tugas apabila project tidak dipilih
+
+Changelog v1.10.0b:
+	- Matikan fitur otorisasi
+
+Changelog v1.10.0:
+	- Penambahan tab laporan tugas pada detail tugas
+	- Menampilkan semua laporan bawahan by default pada laporan pekerjaan
+	- Menambahkan user yang minta ijin pada pengajuan ijin
+	- Implementasi fitur harus update aplikasi terbaru untuk menggunakan
+	- Implementasi fitur otorisasi untuk mematikan notifikasi bawahan dengan ijin manual
+
+Changelog v1.0.9:
+	- Implementasi fitur absensi berkali2 agar karyawan yang setelah pulang bisa absen kembali ke kantor lagi
+
+Changelog v1.0.8z:
+	- Karyawan diharuskan untuk melakukan proses clockin & clockout tiap harinya tanpa boleh ada yang bolong
+	- Tambahan tampilan di halaman depan untuk mengingatkan karyawan terakhir kali absensi kapan (terlampir contoh tampilan)
+	- Absensi sekarang bisa dipakai untuk karyawan yang kerjanya shift2an beda hari
+	- Bug fix Tanggal absensi masuk tidak sesuai
+
+Changelog v1.0.8y:
+	- Penambahan validasi ketika user tidak berada di tempat waktu WFH, maka tidak bisa lanjut absensi
+
+Changelog v1.0.8x:
+	- Fitur search untuk mencari tugas pada tugas yang berkaitan
+	- Bug fix tombol tolak & terima masih keluar pada laporan yang sudah ditolak / terima
+	- Waktu notifikasi atasan dirubah apabila sampai 5 menit tidak kembali ke kantor, maka atasan baru dinotifikasi
+
+Changelog v1.0.8w:
+	- Bug fix fitur edit tugas
+
+Changelog v1.0.8v:
+	- Implementasi fitur search pada tambah tugas
+	- Implementasi additional analytics tool
+
+Changelog v1.0.8u:
+	- Implementasi sistem map pada absensi WFH
+
+Changelog v1.0.8t:
+	- Implementasi sistem absensi perpindahan melalui ijin atasan (absen masuk ke WFH, absen keluar di kantor)
+	- Bug fix gambar pada pelaporan tugas tidak bisa dibuka
+	- Penambahan field memo di pelaporan pekerjaan
+	- Bug fix notifikasi untuk karyawan yang sudah ijin
+
+Changelog v1.0.8s:
+	- Implementasi sistem notifikasi ketika ijin
+	- Penambahan field jam pada dinas sementara
+
+Changelog v1.0.8r:
+	- Bug fix ijin nyasar beda divisi
+	- Bug fix ijin tidak urut
+	- Bug fix beberapa task detail error
+	- Bug fix beberapa user tidak bisa melihat bawahan
+
+Changelog v1.0.8q:
+	- Bug fix absensi karyawan khusus
+	- Pengecekan tambahan untuk kasus timeout
+	- Bug fix Menghilangkan tombol mulai bekerja apabila yang melihat tugas bukan yang ditugaskan
+	- Bug fix User bisa menerima atau menolak laporan pekerjaan diri sendiri
+	- Bug fix semua pekerjaan selesai dibilang terlambat
+	- Bug fix semua pengajuan nyampur
+	- Optimisasi Camera
+
+Changelog v1.0.8p:
+	- Bug fix gagal login
+
+Changelog v1.0.8o:
+	- Bug fix gagal login
+
+Changelog v1.0.8n:
+	- Bug fix fitur tugas ini berkaitan dengan tugas lainnya
+	- Bug fix fitur pengajuan dinas sementara
+	- Bug fix nama pelapor masih john doe
+
+Changelog v1.0.8c:
+	- Penambahan fitur remote checking pada aplikasi
+	- Lock orientasi pada potrait
+	- Menambahkan field divisi pada pelaporan masalah
+
+Changelog v1.0.8b:
+	- Optimisasi fitur Wifi & GPS untuk absensi
+	- Menampilkan semua task untuk diri sendiri dan bawahan
+	- Implementasi fitur pertanyaan bisa di custom
+	- Bug fix tidak bisa buka laporan pekerjaan
+	- Bug fix notifikasi izin ke atasan tidak sesuai
+	- Bug fix tugas yang tampil sebentar lalu lenyap lagi
+
+Changelog v1.0.8a:
+	- Bug fix menu tidak sesuai dengan yang di settingan di backend (termasuk menu project)
+
+Changelog v1.0.8:
+	- Bug Fix fitur lupa password
+	- Bug fix data pada dropdown tidak muncul
+	- Implementasi pelaporan bug otomatis
+	- Penambahan interface pada whitescreen yang muncul tiba2 dikarenakan aplikasi terupdate
+
+Changelog v1.0.7:
+	Admin:
+	- Fitur memasukkan wifi device per kantor
+	- Fitur untuk memasukkan perlu dicek untuk jabatan yang boleh terlambat
+	- Implementasi sistem pengajuan cuti/izin/libur/dinas
+
+	Apps:
+	- Compress Image agar tidak memakan bandwith
+	- (BugFix) Edit task malah create yg baru juga
+	- (BugFix) Di halaman task ditambahkan filter untuk assignee dan diri sndiri, jika yang dilihat bukan task diri sendiri maka tombol mulai bekerja hilang.
+	- (BugFix) API - Clusternya pulang jam 4, notifikasi “anda belum absen pulang”
+	- Implementasi fitur filter di proyek
+	- Implementasi fitur filter di task
+	- Implementasi fitur filter di laporan pekerjaan
+	- Implementasi sistem pengajuan cuti/izin/libur/dinas
+
+Changelog v1.0.6:
+	Admin:
+	- Cluster untuk mengubah jam masuk & keluar karyawan
+	- Absensi yg sudah terlambat tidak boleh diedit lagi
+	- Report absensi, dibuat agar bisa tahu siapa yang sering terlambat
+	- Filter report absensi, dibuat filter range tanggal
+	+ Seharusnya Tidak bisa multiple login
+	+ Pelaporan tugas bisa upload foto lebih dari 1x
+	+ Ada pilihan pembuatan tugas ke semua tim (bisa dicentang manual), tidak perlu satu per satu 
+	Apps:
+	- Karyawan khusus minta dibuka semua metode absen (QR code / Foto / GPS)
+	- Kalau tidak ada tugas yg diselesaikan hari ini, tidak bisa absen pulang
+	- Menulis sandi ditambahkan icon mata agar bisa lihat (Login & Edit profile)
+	+ Ada pilihan pembuatan tugas ke semua tim (bisa dicentang manual), tidak perlu satu per satu 
+	+ dikasih warna label kalau tugas akan expired / sudah lewat (kuning kalau H-3 / merah kalau sudah lewat)
+	+ Pelaporan tugas bisa upload lebih dari 1 foto
+	- Implementasi fitur untuk mendapatkan data pada aplikasi yang bermasalah
+	- Implementasi fitur untuk update secara remote
+
+Changelog v1.0.5:
+- Implementasi fitur auto refresh ketika data dirubah
+- Bug fixing menambah / mengubah pengumuman
+- Implementasi fitur pelaporan masalah
+	- Karyawan membuat pelaporan masalah baru
+	- User yang bertugas membalas pelaporan masalah tersebut
+	- Pelaporan masalah jika sudah selesai bisa ditutup
+- Implementasi fitur notifikasi / reminder
+	- Notification ketika lupa absen pulang ketika keluar dari radius
+	- Pengecekan kalau keluar dari radius kantor waktu jam istirahat (5 menit sekali)
+	- Notif kalau tugas dibuat / dirubah ke assignee
+	- Notif kalau ada pelaporan tugas (pelaporan baru dibuat karyawan)
+	- Notif supervisor menerima / menolak pelaporan tugas
+	- Notif reminder laporan tugas setiap x interval
+
+Changelog v1.0.4:
+- Bug fix force quit pada pelaporan kerja
+- Bug fix pin pada laporan pekerjaan
+- Bug fix pengecekan GPS absensi
+- Bug fix label pada detail tugas
+- Implementasi fitur proyek
+- Implementasi fitur notifikasi (broadcast message)
+
+Changelog v1.0.3:
+- Bug fix pada GPS absensi
+- Bug fix pada tampilan tanggal absensi salah
+
+Changelog v1.0.2:
+- Penugasan bisa ke diri sendiri
+- Pembetulan permission error ke penugasan & notifikasi
+- Pembuatan list notifikasi
+- Pembuatan fitur list notifikasi yang belum terbaca
+- Pembetulan beberapa fitur tambahan pada penugasan

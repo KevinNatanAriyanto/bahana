@@ -1,0 +1,96 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext {
+        buildToolsVersion = "30.0.2"
+        minSdkVersion = 21
+        compileSdkVersion = 29
+        targetSdkVersion = 29
+        supportLibVersion = "27.1.1"
+        googlePlayServicesAuthVersion = "16.0.1" // <--- use this version or newer
+        googlePlayServicesVersion = '16.+'
+        firebaseVersion = "21.1.0"
+
+        googlePlayServicesLocationVersion = "17.0.0"  // Or higher.
+        appCompatVersion = "1.1.0"      // Or higher.  Required for new AndroidX compatibility.
+
+        // minSdkVersion = 21
+        
+        // googlePlayServicesAuthVersion = "16.0.1" // <--- use this version or newer
+        // googlePlayServicesVersion = '16.+'
+
+        // buildToolsVersion = "25.+"
+        // compileSdkVersion = 25
+        // targetSdkVersion = 25
+        // supportLibVersion = "25.1.1"
+    }
+    repositories {
+        google()
+        mavenLocal()
+        mavenCentral()
+        gradlePluginPortal()
+        maven { url 'https://plugins.gradle.org/m2/' } // Gradle Plugin Portal 
+    }
+    dependencies {
+        classpath("com.android.tools.build:gradle:3.4.1")
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.12.1, 0.99.99]'
+        // classpath 'com.google.gms:google-services:4.3.0'
+        classpath 'com.google.gms:google-services:4.3.3'
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.10'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenLocal()
+        mavenCentral()
+        gradlePluginPortal()
+        // maven { url 'https://maven.testfairy.com' }
+        maven {
+            url "https://www.jitpack.io"
+        }
+        maven { 
+            url 'https://maven.google.com' 
+        }
+        maven {
+            // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+            url("$rootDir/../node_modules/react-native/android")
+        }
+        maven {
+            // Android JSC is installed from npm
+            url("$rootDir/../node_modules/jsc-android/dist")
+        }
+
+        maven {
+            // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+            url(new File(["node", "--print", "require.resolve('react-native/package.json')"].execute().text.trim(), "../android"))
+        }
+        maven {
+            // Android JSC is installed from npm
+            url(new File(["node", "--print", "require.resolve('jsc-android/package.json')"].execute().text.trim(), "../dist"))
+        }
+
+        mavenCentral {
+            // We don't want to fetch react-native from Maven Central as there are
+            // older versions over there.
+            content {
+                excludeGroup "com.facebook.react"
+            }
+        }
+
+        // maven {
+            // Required for react-native-background-geolocation
+            // url("${project(':react-native-background-geolocation').projectDir}/libs")
+        // }
+        maven {
+            // Required for react-native-background-fetch
+            url("${project(':react-native-background-fetch').projectDir}/libs")
+        }
+
+        // jcenter() // depreciated
+    }
+}

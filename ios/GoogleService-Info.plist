@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>166978453556-j8qt5984sc0vrmm6m0bn1coetd7keooe.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.166978453556-j8qt5984sc0vrmm6m0bn1coetd7keooe</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>166978453556-s6matkipjuilsg4d32is8fmla33lhh8p.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBZqMZgLiaNwP2BIUX_1SCGcCSjGy09jGE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>166978453556</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.thechef</string>
+	<key>PROJECT_ID</key>
+	<string>the-chef-f26d3</string>
+	<key>STORAGE_BUCKET</key>
+	<string>the-chef-f26d3.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:166978453556:ios:c2ed47d9d9eaee6ea04a61</string>
+	<key>DATABASE_URL</key>
+	<string>https://the-chef-f26d3.firebaseio.com</string>
+</dict>
+</plist>
